@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real-Time Chat App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="chat-container">
+        <div class="chat-header">
+            <h2>Live Chat Room</h2>
+            <div id="connection-status" class="status connected">Connected</div>
+        </div>
+        
+        <!-- Registration screen to ask for username before joining -->
+        <div id="setup-screen" class="setup-screen">
+            <h3>Welcome! What's your name?</h3>
+            <input type="text" id="username-input" placeholder="Enter your name..." autocomplete="off">
+            <button id="join-btn">Join Chat</button>
+        </div>
+
+        <!-- Main chat screen -->
+        <div id="chat-screen" class="hidden">
+            <!-- Messages Display -->
+            <ul id="messages" class="messages-list"></ul>
+            
+            <!-- Message Input Area -->
+            <form id="chat-form" class="chat-form">
+                <input id="message-input" autocomplete="off" placeholder="Type a message..." required />
+                <button type="submit">Send</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Client-side Socket.io library (Served automatically by the socket.io node module on the backend!) -->
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

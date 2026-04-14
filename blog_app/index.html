@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blogging Website</title>
+    <!-- Link to external CSS stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navbar Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <h1>My Blog</h1>
+        </div>
+    </nav>
+
+    <div class="container">
+        <!-- Main Content Area: Displays Blog Posts -->
+        <main class="main-content">
+            <div class="section-header">
+                <h2>Recent Posts</h2>
+            </div>
+            
+            <!-- This container will hold dynamically generated posts -->
+            <div id="posts-container" class="posts-grid">
+                <!-- Posts injected by JavaScript -->
+            </div>
+        </main>
+
+        <!-- Sidebar Area: Form to Create/Edit Blog Posts -->
+        <aside class="sidebar">
+            <div class="form-card">
+                <h2 id="form-title">Create New Post</h2>
+                <form id="blog-form">
+                    <div class="form-group">
+                        <label for="post-title">Title</label>
+                        <input type="text" id="post-title" required placeholder="Enter post title...">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="post-content">Content</label>
+                        <textarea id="post-content" rows="6" required placeholder="Write your post here..."></textarea>
+                    </div>
+                    
+                    <button type="submit" id="submit-btn" class="btn btn-primary">Publish Post</button>
+                    <!-- Cancel button hidden until Edit mode -->
+                    <button type="button" id="cancel-btn" class="btn btn-secondary hidden" onclick="cancelEdit()">Cancel</button>
+                </form>
+            </div>
+        </aside>
+    </div>
+
+    <!-- Link to external JavaScript file -->
+    <script src="script.js"></script>
+</body>
+</html>

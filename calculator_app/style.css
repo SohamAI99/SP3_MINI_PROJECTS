@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #1e0059, #8a2387, #e94057, #f27121);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.calculator {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    width: 360px;
+    border-radius: 30px;
+    padding: 30px;
+    box-shadow: 0 25px 45px rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.display {
+    text-align: right;
+    margin-bottom: 30px;
+    padding: 15px;
+    min-height: 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    word-wrap: break-word;
+    word-break: break-all;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    box-shadow: inset 0 2px 10px rgba(0,0,0,0.2);
+}
+
+.previous-operand {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 1.2rem;
+    min-height: 1.5rem;
+}
+
+.current-operand {
+    color: white;
+    font-size: 3rem;
+    font-weight: 500;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+
+.btn {
+    border: none;
+    outline: none;
+    height: 65px;
+    border-radius: 18px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    background: rgba(255, 255, 255, 0.05);
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.btn:active {
+    transform: scale(0.92);
+}
+
+.num-btn:hover {
+    background: rgba(255, 255, 255, 0.15);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+}
+
+.fn-btn {
+    color: #ffd700;
+    background: rgba(255, 215, 0, 0.1);
+}
+
+.fn-btn:hover {
+    background: rgba(255, 215, 0, 0.3);
+}
+
+.op-btn {
+    color: #00e5ff;
+    background: rgba(0, 229, 255, 0.1);
+}
+
+.op-btn:hover {
+    background: rgba(0, 229, 255, 0.3);
+}
+
+.span-two {
+    grid-column: span 2;
+    width: 100%;
+}
+
+.compute-btn {
+    background: linear-gradient(135deg, #00e5ff, #005bb5);
+    color: white;
+    border: none;
+}
+
+.compute-btn:hover {
+    background: linear-gradient(135deg, #005bb5, #00e5ff);
+    box-shadow: 0 8px 25px rgba(0, 229, 255, 0.5);
+}
